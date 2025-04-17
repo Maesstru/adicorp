@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual envs
+env/
+venv/
+.venv/
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+media/
+static/
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# IDE/editor stuff
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Test coverage
+htmlcov/
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
