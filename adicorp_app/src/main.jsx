@@ -1,10 +1,13 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import Root from './Routes.jsx';
 import './index.css'
-import ProjectList from './pages/Projects.jsx'
+import "bootstrap/dist/css/bootstrap.min.css";
+import ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
 
-createRoot(document.getElementById('root')).render(
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProjectList />
+    <Root></Root>
   </StrictMode>,
 )

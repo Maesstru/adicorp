@@ -1,68 +1,90 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --color-primary: #D32F2F; /* red */
+  --color-secondary: #212121; /* dark */
+  --color-background: #F5F5F5;
+  --color-text: #212121;
+  --color-muted: #9E9E9E;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --color-accent: #FFC107;
+  --color-success: #4CAF50;
+  --color-info: #2196F3;
+  --color-error: #B71C1C;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+ 
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.card-img-top{
+  aspect-ratio: 16/9 !important;
+  object-fit: cover;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.navbar-toggler {
+  border: none !important;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.container{
+  background-color: transparent !important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+main{
+  background-color: var(--color-background);
+}
+
+.btn{
+  border-radius: 2px !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  box-shadow: none !important;
+}
+
+.nav-link{
+  text-align: center;
+}
+
+h1{
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+/* Styles for the container */
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column on mobile by default */
+  gap: 20px; /* Gap between the blog posts */
+  padding: 20px;
+}
+
+/* Blog post item styling */
+.blog-post,.card-img-top {
+  border-radius: 0 !important;
+}
+
+.blog-post{
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.27) !important;
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.27) !important;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.27) !important;
+}
+
+/* For medium screens (tablet, 2 blog posts per row) */
+@media (min-width: 768px) {
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+}
+
+/* For larger screens (desktop, 3 blog posts per row) */
+@media (min-width: 1024px) {
+  .blog-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
   }
 }
+
+/* For very large screens (larger desktop, 4 blog posts per row) */
+@media (min-width: 1400px) {
+  .blog-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for very large screens */
+  }
+}
+

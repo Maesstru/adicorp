@@ -1,0 +1,52 @@
+.carousel{
+    width: 100vw;
+    height: 80vh;
+}
+
+.carousel-item img {
+  width: 100%;         /* Ensure the image takes up full width */
+  height: 80vh;       /* Set a fixed height for all images */
+  object-fit: cover;   /* This will maintain the aspect ratio and crop the image to fill the container */
+  object-position: center; /* Align the image to the center if it doesn't cover the whole width */
+}
+
+#proj-title{
+    font-size: 3rem;
+}
+
+#infos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+}
+
+.project-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+@media (max-width: 768px) {
+  #infos{
+    flex-direction: column;
+  }
+}

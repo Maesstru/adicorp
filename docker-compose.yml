@@ -3,19 +3,17 @@ version: '3.8'
 services:
   backend:
     build:
-      context: .
-      dockerfile: backend/Dockerfile.dev
+      context: ./adicorp_server
+      dockerfile: Dockerfile.dev
     ports:
       - "8000:8000"
     volumes:
       - ./adicorp_server:/app
-    depends_on:
-      - db
 
   frontend:
     build:
-      context: .
-      dockerfile: frontend/Dockerfile.dev
+      context: ./adicorp_app
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
