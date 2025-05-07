@@ -1,20 +1,35 @@
+// App.js or Root.js
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProjectList from "./pages/Projects";
 import Home from "./pages/Home";
-import Project from "./pages/Project"
+import Project from "./pages/Project";
+import Layout from "./pages/Base"; // Import the Layout component
 
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <Home />,
+      element: <Layout />, // Use Layout as a wrapper for all routes
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/portfolio",
+          element: <ProjectList />,
+        },
+        {
+          path: "/project/:id",
+          element: <Project />,
+        },
+      ],
     },
-    { path: "/contact", element: <Contact /> },
-    { path: "/portfolio", element: <ProjectList /> },
-    { path: "/project/:id", element: <Project /> },
   ],
   {
     future: {

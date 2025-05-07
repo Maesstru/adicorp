@@ -1,10 +1,11 @@
-import React from "react";
+// components/Footer.js
+import React, { forwardRef } from "react";
 import logo from "../assets/logo_yell.png"; // Assuming the logo image is stored in the "assets" folder
 import "../styles/footer.css"; // Import the custom CSS for the footer
 
-function Footer() {
+const Footer = forwardRef((props, ref) => {
   return (
-    <footer className="footer">
+    <footer className="footer" ref={ref}>
       <div className="footer-content">
         <div className="footer-logo">
           <img src={logo} alt="Company Logo" className="footer-logo-img" />
@@ -24,6 +25,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+});
 
 export default Footer;

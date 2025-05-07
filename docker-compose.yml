@@ -18,6 +18,10 @@ services:
       - "3000:3000"
     volumes:
       - ./adicorp_app:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+
     stdin_open: true
     tty: true
 

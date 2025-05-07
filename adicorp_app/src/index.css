@@ -13,6 +13,11 @@
  
 }
 
+#root{
+  height: 100%;
+  position: absolute;
+}
+
 .card-img-top{
   aspect-ratio: 16/9 !important;
   object-fit: cover;
@@ -28,6 +33,7 @@
 
 main{
   background-color: var(--color-background);
+  min-height: 100dvh;
 }
 
 .btn{

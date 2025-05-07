@@ -2,8 +2,6 @@
 import Carusel from '../components/Carusel'
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
-import TopNav from "../components/Navbar";
-import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { startTransition } from "react";
 import { useParams } from "react-router-dom"; // Hook to access dynamic URL params
@@ -34,8 +32,7 @@ function Post() {
   }
 
   return (
-    <main id="project">
-      <TopNav></TopNav>
+    <div id="project">
       <div className="project-body">
         <Carusel images={post.images}></Carusel>
         <div id="infos">
@@ -70,9 +67,8 @@ function Post() {
           </div>
         </div>
         <Button variant="outline-dark" onClick={() => {handleClick("/portfolio")}}>Back</Button>
-        <Footer></Footer>
       </div>
-    </main>
+    </div>
   );
 }
 

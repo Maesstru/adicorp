@@ -1,7 +1,8 @@
-import TopNav from "../components/Navbar";
+
+import Form from "../components/MessageForm";
 
 function ContactPage() {
-  return <div><TopNav/><main></main></div>;
+  return <div><Form></Form></div>;
 };
 
 export default ContactPage;

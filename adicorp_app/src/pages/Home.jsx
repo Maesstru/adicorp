@@ -1,10 +1,8 @@
-import TopNav from "../components/Navbar";
+
 import Button from "react-bootstrap/Button";
 import Hero from '../components/Hero'
-import Footer from '../components/Footer'
 import { useNavigate } from "react-router-dom";
 import { startTransition } from "react";
-import '../hero.css'
 import '../styles/home.css'
 
 function HomePage() {
@@ -18,10 +16,8 @@ function HomePage() {
     };
 
   return (
-    <main>
-      <TopNav></TopNav>
+      <>
       <Hero></Hero>
-
       <div className="home-b">
         <div id="description">
           Adicorp is a full-service construction company specializing in
@@ -37,9 +33,8 @@ function HomePage() {
           our business — it’s our passion.
         </div>
         <Button onClick={() => handleClick("/portfolio")} variant="outline-dark">See our portfolio</Button>
-        <Footer></Footer>
       </div>
-    </main>
+      </>
   );
 }
 

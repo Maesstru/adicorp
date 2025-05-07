@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { startTransition } from "react";
 import logo from "../assets/logo_red.png";
-import { Nav, NavItem } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 
 function TopNav() {
     const location = useLocation();

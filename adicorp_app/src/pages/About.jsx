@@ -1,9 +1,8 @@
-import TopNav from "../components/Navbar";
 
 const AboutPage = () => {
   return (
     <div>
-      <TopNav></TopNav>
+      About page
     </div>
   );
 };

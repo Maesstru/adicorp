@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-import TopNav from "../components/Navbar";
 import Card from "../components/Card";
-import Footer from "../components/Footer";
 
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
-
-  
 
   useEffect(() => {
     // Fetch data from the Django API endpoint
@@ -18,9 +14,6 @@ const ProjectList = () => {
   }, []); // Empty dependency array ensures this runs once when the component mounts
 
   return (
-    <main>
-      <TopNav></TopNav>
-      <div>
         <div className="blog-container">
           {projects.map((project) => (
             <Card
@@ -32,9 +25,6 @@ const ProjectList = () => {
               address={project.location}></Card>
           ))}
         </div>
-      </div>
-      <Footer></Footer>
-    </main>
   );
 };
 
