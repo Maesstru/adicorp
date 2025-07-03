@@ -1,21 +1,45 @@
-import { Box, Typography } from '@mui/material';
+import { Stack, Typography, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function Presentation() {
+  const navigate = useNavigate();
+
   return (
-    <Box
+    <Stack
       sx={{
-        height: '100vh',
-        width: '100%',
-        backgroundColor: 'red',
-        display: 'flex',
+        width: '100dvw',
+        backgroundColor: 'background.default',
+        px: 4,
+        py: 8,
         alignItems: 'center',
         justifyContent: 'center',
         color: '#fff',
+        gap: 4,
       }}
     >
-      <Typography variant="h3" component="h1">
-        Full Screen Red Section
+      <Typography variant="h4">
+        Adicorp is a full-service construction company specializing in
+        high-quality residential, commercial, and industrial projects. With a
+        reputation built on integrity, craftsmanship, and reliability, we turn
+        blueprints into bold realities — on time and within budget.<br></br>
+        <br />
+        From foundation to finish, our team brings decades of experience,
+        innovative techniques, and a hands-on approach to every project. Whether
+        it’s new construction, renovations, or infrastructure development, we’re
+        committed to building strong structures — and even stronger client
+        partnerships. At Adicorp, construction is more than our business — it’s
+        our passion.
       </Typography>
-    </Box>
+      <Button
+        variant="outlined"
+        color="secondary"
+        onClick={() => {
+          navigate('/portfolio');
+        }}
+      >
+        {' '}
+        Portfolio{' '}
+      </Button>
+    </Stack>
   );
 }

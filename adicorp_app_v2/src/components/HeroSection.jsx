@@ -6,8 +6,8 @@ export default function HeroSection() {
   return (
     <Box
       sx={{
-        minHeight: '100dvh',
-        minWidth: '100dvw',
+        height: '100dvh',
+        width: '100dvw',
         backgroundImage: `url(${bgImage})`, // Replace with your image path
         backgroundSize: 'cover',
         backgroundPosition: 'center',

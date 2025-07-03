@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Box,
   Grid,
@@ -7,10 +6,9 @@ import {
   useTheme,
   useMediaQuery,
   Stack,
-  Paper,
 } from '@mui/material';
 
-import logo from '../assets/logo_red.png'; // replace with your actual path
+import logo from '../assets/logo_yell.png'; // replace with your actual path
 
 export default function Footer({ isSpacer = false }) {
   const theme = useTheme();
@@ -27,6 +25,7 @@ export default function Footer({ isSpacer = false }) {
         color: theme.palette.text.primary,
         position: !isSpacer ? 'fixed' : 'static',
         bottom: !isSpacer ? 0 : 'auto',
+        width: '100dvw',
       }}
     >
       <Grid
@@ -43,17 +42,14 @@ export default function Footer({ isSpacer = false }) {
             justifyContent={'center'}
             alignItems="center"
           >
-            <Link href="#" color="inherit" underline="hover">
-              <Typography>Home</Typography>
+            <Link href="/" color="inherit" underline="hover">
+              <Typography variant="link1">Home</Typography>
             </Link>
-            <Link href="#" color="inherit" underline="hover">
-              About
+            <Link href="/contact" color="inherit" underline="hover">
+              <Typography variant="link1">Contact</Typography>
             </Link>
-            <Link href="#" color="inherit" underline="hover">
-              Services
-            </Link>
-            <Link href="#" color="inherit" underline="hover">
-              Contact
+            <Link href="/portfolio" color="inherit" underline="hover">
+              <Typography variant="link1">Portfolio</Typography>
             </Link>
           </Stack>
         </Grid>
@@ -76,7 +72,7 @@ export default function Footer({ isSpacer = false }) {
             sx={{ width: '4rem', mr: '.5rem' }}
           />
           <Typography variant="body2">
-            © {new Date().getFullYear()} My Company. All rights reserved.
+            © {new Date().getFullYear()} Adicorp. All rights reserved.
           </Typography>
         </Grid>
       </Grid>

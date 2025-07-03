@@ -16,12 +16,12 @@ const theme = createTheme({
 
     background: {
       default: '#444', // Dark neutral for app background
-      paper: '#2c2c2c', // Slightly lighter for cards and surfaces
+      paper: '#d32f2f', // Slightly lighter for cards and surfaces
     },
 
     text: {
       primary: '#ffffff',
-      secondary: '#b0b0b0',
+      secondary: '#ccc',
     },
 
     error: {
@@ -43,9 +43,28 @@ const theme = createTheme({
 
   typography: {
     fontFamily: `'Roboto', 'Segoe UI', sans-serif`,
-    h1: { fontWeight: 700 },
-    h2: { fontWeight: 600 },
-    h3: { fontWeight: 600 },
+    h1: { fontWeight: 700, fontSize: '2.5rem' },
+    h2: { fontWeight: 600, fontSize: '2rem' },
+    h3: { fontWeight: 600, fontSize: '1.5rem' },
+    h4: { fontWeight: 500, fontSize: '1rem' },
+    body: {
+      fontWeight: 400,
+      fontSize: '.8rem',
+    },
+    link1: {
+      fontWeight: 500,
+      fontSize: '1rem',
+      textDecoration: 'none',
+      color: '#fff',
+      cursor: 'pointer',
+    },
+    link2: {
+      fontWeight: 600,
+      fontSize: '1.5rem',
+      textDecoration: 'none',
+      color: '#fff',
+      cursor: 'pointer',
+    },
     button: { textTransform: 'uppercase' },
   },
 });

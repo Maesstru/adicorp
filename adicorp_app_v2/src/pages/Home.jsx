@@ -3,7 +3,6 @@ import HeroSection from '../components/HeroSection';
 import Presentation from '../components/Presentation';
 import Footer from '../components/Footer';
 import { Box } from '@mui/material';
-import theme from '../Theme';
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
         <HeroSection />
         <Presentation />
       </Box>
-      <Box sx={{ position: 'relative', zIndex: 1 }}>
+      <Box id="hatz" sx={{ position: 'relative', zIndex: 1 }}>
         <Footer isSpacer={true} />
       </Box>
       <Box sx={{ position: 'relative', zIndex: 2 }}>
